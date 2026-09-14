@@ -887,6 +887,22 @@ footer.site-footer a:hover { color: var(--green); }
   margin-top: 0.85rem;
 }
 
+/* ---------- Slide deck (one-column) ---------- */
+
+.slide-deck {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin-bottom: var(--space-md);
+}
+
+.slide-deck img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
 .project-nav {
   display: flex;
   justify-content: space-between;
