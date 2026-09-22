@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lafayette Gardens — Annie Tang</title>
+<meta name="description" content="Lafayette Gardens: a community-led logbook and guide co-designed with residents of a Brooklyn social housing development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/readable.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="site-title">Annie Tang</a>
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li class="nav-contact">
+      <a href="../index.html#contact" class="contact-trigger">Contact</a>
+      <div class="contact-dropdown">
+        <a href="mailto:annietang@posteo.de">annietang@posteo.de</a>
+        <a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="side-nav side-nav-left">
+  <a href="pod.html">← Back to Pod</a>
+</div>
+
+<header>
+  <h1>Lafayette Gardens</h1>
+  <p class="hero-tagline">Increasing Access to Resources in Social Housing Developments</p>
+</header>
+
+<figure class="widescreen">
+  <img src="../images/lafayette-cover.png" alt="Lafayette Gardens resident logbook, softcover mockup on a wooden table">
+</figure>
+
+<div class="hero-row">
+  <dl class="hero-meta">
+    <div><dt>Company</dt><dd>Royal College of Art, Imperial College London, Pratt Institute</dd></div>
+    <div><dt>Responsibilities</dt><dd>Facilitation, Information Design</dd></div>
+    <div><dt>Team</dt><dd>Solo Project</dd></div>
+  </dl>
+
+  <p>Lafayette Gardens is a community-led project within a social housing development in Brooklyn, New York. "A home to be proud of" was created as a logbook and guide to help residents better access resources available to them. Created by the residents, for the residents.</p>
+</div>
+
+<section>
+  <h2>Exploring Social Housing in New York City</h2>
+  <p>Lafayette Gardens is a residential complex in Brooklyn with a large aging population of 384. With the help of Mr Ty, the head of the residents association, I started exploring and integrating myself into the community to better understand their needs.</p>
+  <h3>Key Insights</h3>
+  <ul>
+    <li>Many residents find it difficult to transition to the new digital social housing systems</li>
+    <li>Mr Ty, head of the residents association, is the main source of help for NYCHA-related problems</li>
+    <li>Residents feel grateful and can trust Mr Ty's word, not the city's</li>
+  </ul>
+  <figure>
+    <img src="../images/v3-lg-context.png" alt="Photos from fieldwork at Lafayette Gardens">
+  </figure>
+</section>
+
+<section>
+  <h2>Designing Together</h2>
+  <p>Three official co-design workshops were held with distinct themes. To prepare for each workshop, a clear but flexible agenda was set and example ideas were created to help with creativity. Food and drinks were provided.</p>
+  <figure>
+    <img src="../images/lafayette-workshop.png" alt="Photos from the three co-design workshops held with Lafayette Gardens residents">
+  </figure>
+</section>
+
+<section>
+  <h2>Minimal but Meaningful</h2>
+  <figure>
+    <img src="../images/lafayette-design.png" alt="Annotated photos of the Lafayette Gardens logbook showing its cover, page layout, and document pocket">
+  </figure>
+  <ul>
+    <li>Named after a previous booklet, for older residents to recognise</li>
+    <li>Easy to flip to sections without need for special printing</li>
+    <li>Designated space to place important documents</li>
+    <li>A note grid was created in the shape of the Lafayette building</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Distributed to the Residents</h2>
+  <p>The Lafayette Gardens logbook has been handed over and is currently under production to be given to over 800 residents, more than 350 of which are seniors.</p>
+  <figure>
+    <img src="../images/lafayette-outcome.png" alt="A resident holding the finished Lafayette Gardens logbook">
+    <figcaption>"This logbook is a simple but impactful solution for our residents, who struggle getting the help they need. With it I can now help more people!"<br>— Mr Ty, Head of the Residents Association</figcaption>
+  </figure>
+</section>
+
+<div class="side-nav side-nav-right">
+  <a href="prompted.html">Next project (PromptED) →</a>
+</div>
+
+<footer>
+  <div class="footer-contact">
+    <p><a href="mailto:annietang@posteo.de">annietang@posteo.de</a></p>
+    <p><a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a></p>
+  </div>
+  <p class="copyright">© 2026 Annie Tang</p>
+</footer>
+
+<script>
+  var navContact = document.querySelector('.nav-contact');
+  if (navContact) {
+    navContact.querySelector('.contact-trigger').addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navContact.classList.toggle('open');
+    });
+    document.addEventListener('click', function (e) {
+      if (!navContact.contains(e.target)) navContact.classList.remove('open');
+    });
+  }
+
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    document.body.classList.toggle('scrolled', y > 40);
+    document.body.classList.toggle('nav-solid', y > 10);
+    if (y < 10) {
+      document.body.classList.remove('nav-hidden');
+    } else if (y > lastScrollY) {
+      document.body.classList.add('nav-hidden');
+    } else if (y < lastScrollY) {
+      document.body.classList.remove('nav-hidden');
+    }
+    lastScrollY = y;
+  });
+</script>
+
+</body>
+</html>

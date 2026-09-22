@@ -4,151 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>People's Toilet Builder — Annie Tang</title>
-<meta name="description" content="The world's first standardised compendium platform for public toilet design, developed at the Royal College of Art and Imperial College London.">
-<link rel="stylesheet" href="../css/style.css">
+<meta name="description" content="The People's Toilet Builder: a user-centric digital platform aiding good public sanitation systems worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/readable.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="../index.html" class="logo" aria-label="Annie Tang, home"><span class="mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 21 L12 4 L20 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.8 14 L16.2 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 4 L18 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="logo-name">Annie Tang</span></a>
-    <ul>
-      <li><a href="../index.html#work">Work</a></li>
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
-    </ul>
-  </div>
+<nav>
+  <a href="../index.html" class="site-title">Annie Tang</a>
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li class="nav-contact">
+      <a href="../index.html#contact" class="contact-trigger">Contact</a>
+      <div class="contact-dropdown">
+        <a href="mailto:annietang@posteo.de">annietang@posteo.de</a>
+        <a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </li>
+  </ul>
 </nav>
 
-<div class="wrap project-hero">
-  <a href="../index.html#work" class="back-link">← Back to work</a>
-  <h1>People's Toilet Builder</h1>
-  <p class="tagline">The world's first standardised compendium platform for toilet design — helping professionals plan safe, appropriate public sanitation anywhere in the world.</p>
-
-  <div class="hero-image">
-    <img src="../images/toilet-hero.jpg" alt="The People's Public Toilet Builder platform shown on a tablet held against a weathered wall">
-  </div>
-
-  <dl class="meta-row">
-    <div><dt>Affiliation</dt><dd>Royal College of Art, Imperial College London</dd></div>
-    <div><dt>Role</dt><dd>Concept, system, user research & experience</dd></div>
-    <div><dt>Team</dt><dd>Innovation manager, design researcher, creative director</dd></div>
-    <div><dt>Length</dt><dd>2023</dd></div>
-  </dl>
-
-  <div class="affil-row">
-    <span class="affil-label">In partnership with</span>
-    <span class="affil-badge"><span class="affil-mark">RCA</span>Royal College of Art</span>
-    <span class="affil-badge"><span class="affil-mark">ICL</span>Imperial College London</span>
-    <span class="affil-badge"><span class="affil-mark">WTO</span>World Toilet Organisation</span>
-  </div>
-
-  <p class="summary">The People's Public Toilet Builder is a user-centric digital platform aiming to promote good public sanitation systems. Machine learning and crowd-sourced information help professionals like architects make informed decisions when planning toilet projects.</p>
+<div class="side-nav side-nav-left">
+  <a href="prompted.html">← Back to PromptED</a>
 </div>
 
-<section class="wrap" style="padding-top:0;">
-  <div class="story-block">
-    <h3>Context</h3>
-    <div class="story-copy">
-      <div class="stat-row">
-        <div class="stat"><span class="num">3.4B</span><span class="label">people lack access to clean, safe, and accessible sanitation — in many cases leading to disease or death.</span></div>
-      </div>
-      <p>The core problem isn't just infrastructure — it's the information and guidance available to build safe, maintainable facilities. What exists today is inaccessible to key actors (dense, jargon-heavy resources exclude community leaders), fragmented and skewed toward economically advanced nations, and siloed behind institutional walls.</p>
+<header>
+  <h1>People's Toilet Builder</h1>
+  <p class="hero-tagline">The world's first standardised compendium for toilet design</p>
+</header>
 
-      <figure class="figure">
-        <img src="../images/toilet-context.jpg" alt="A stilt-house village built over a river, illustrating the scale of underserved sanitation infrastructure">
-      </figure>
-    </div>
-  </div>
+<figure class="widescreen">
+  <img src="../images/v3-wto-cover.png" alt="People's Toilet Builder hero shot">
+</figure>
 
-  <div class="story-block">
-    <h3>Exploration</h3>
-    <div class="story-copy">
-      <p>I interviewed stakeholders across the value chain in Asia, North America, and Africa — including a professor of architecture in Illinois, a sanitation official from Kaduna State, Nigeria, and a sanitation development lead in Bangalore, India. Alongside this, I analysed existing systems and successful precedents (SDI's global slum-dweller network, the Compendium of Sanitation Systems and Technologies, the UNHCR WASH manual) and mapped user journeys to incorporate the feedback into our vision.</p>
+<div class="hero-row">
+  <dl class="hero-meta">
+    <div><dt>Company</dt><dd>Royal College of Art, Imperial College London</dd></div>
+    <div><dt>Responsibilities</dt><dd>Concept, System, User Research &amp; Experience</dd></div>
+    <div><dt>Team</dt><dd>Innovation Manager, Design Researcher, Creative Director</dd></div>
+  </dl>
 
-      <div class="stakeholder-grid">
-        <figure><img src="../images/toilet-stakeholder-illinois.jpg" alt="Video call interview with a professor of architecture based in Illinois, USA"><figcaption>Professor of Architecture, Illinois, USA</figcaption></figure>
-        <figure><img src="../images/toilet-stakeholder-nigeria.jpg" alt="Video call interview with a sanitation official from Kaduna State, Nigeria"><figcaption>Sanitation Dept., Kaduna State Gov., Nigeria</figcaption></figure>
-        <figure><img src="../images/toilet-stakeholder-bangalore.jpg" alt="Video call interview with a sanitation development lead in Bangalore, India"><figcaption>Sanitation Development, Bangalore, India</figcaption></figure>
-      </div>
+  <p>The People's Public Toilet Builder is a user-centric digital platform aiming to aid and promote good public sanitation systems. Machine learning and crowd-sourced information are leveraged to assist professionals like architects in making informed decisions when planning toilet projects.</p>
+</div>
 
-      <figure class="figure">
-        <img src="../images/toilet-report.jpg" alt="Early sketches and information architecture mapping laid out on paper">
-        <figcaption>Early sketching and information-architecture work — mapping who builds what, where, and what they need to know.</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="story-block">
-    <h3>Development</h3>
-    <div class="story-copy">
-      <p>The flow was designed so user-centred decisions were baked into the building process itself. Reports and questions were tailored to the user's role — an architect might receive design guidelines, while a project officer would see relevant legislation.</p>
-
-      <div class="carousel">
-        <div class="carousel-track">
-          <figure class="carousel-slide">
-            <img src="../images/toilet-wireframe-sketch1.jpg" alt="Hand-drawn grid of low-fidelity screen wireframes on paper">
-            <figcaption class="carousel-caption">Sketching the first screen-by-screen layout by hand.</figcaption>
-          </figure>
-          <figure class="carousel-slide">
-            <img src="../images/toilet-wireframe-sketch2.jpg" alt="Hand-drawn user journey flowchart mapping decisions like role, location, and audience">
-            <figcaption class="carousel-caption">Mapping the underlying user journey and decision flow.</figcaption>
-          </figure>
-          <figure class="carousel-slide">
-            <img src="../images/toilet-wireframe-lofi.jpg" alt="Low-fidelity greyscale digital wireframe of the platform's homepage">
-            <figcaption class="carousel-caption">Translating sketches into low-fidelity digital wireframes.</figcaption>
-          </figure>
-          <figure class="carousel-slide">
-            <img src="../images/toilet-wireframe-hifi.jpg" alt="Higher-fidelity dark-themed digital mockup of the project configuration flow">
-            <figcaption class="carousel-caption">Refining into a higher-fidelity configuration flow.</figcaption>
-          </figure>
-        </div>
-        <div class="carousel-controls">
-          <div class="carousel-dots"></div>
-          <button class="carousel-btn carousel-prev" aria-label="Previous">←</button>
-          <button class="carousel-btn carousel-next" aria-label="Next">→</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="story-block">
-    <h3>Key workflow</h3>
-    <div class="story-copy">
-      <div class="card-grid">
-        <div class="card"><img src="../images/toilet-workflow-landing.jpg" alt="The People's Public Toilet Builder landing page"><h4>1. Landing page</h4><p>Users start here, heading to their project hub or browsing case studies and information banks.</p></div>
-        <div class="card"><img src="../images/toilet-workflow-myarea.jpg" alt="The Builder Base showing a user's saved projects"><h4>2. Builder base</h4><p>Projects are stored and created here, alongside relevant case studies and ongoing public projects.</p></div>
-        <div class="card"><img src="../images/toilet-workflow-selection.jpg" alt="The Project Builder interface showing configuration steps"><h4>3. Project builder</h4><p>Users break a project into simple sections, adding what they know and selecting what they need to consider.</p></div>
-      </div>
-      <p style="margin-top:1.5rem;">On completion, the builder generates a final report filled with regional information — local resources, cultural practice, and relevant legislation.</p>
-
-      <figure class="figure">
-        <img src="../images/toilet-outcome.jpg" alt="A generated toilet-project report for the South African Astronomical Observatory shown on a laptop">
-        <figcaption>An example generated report for a public toilet project at the South African Astronomical Observatory, Cape Town — surfacing local legislation, planning laws, technical guidelines, and available grants.</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="story-block">
-    <h3>Outcome</h3>
-    <div class="story-copy">
-      <p>The project was taken forward into an implementation stage with support from the Gates Foundation, SuSanA, and GIZ collaborators, though it has since been paused. Had it continued, it would have become the world's first comprehensive toilet compendium — of real value to the hygiene and safety of millions of people worldwide.</p>
-    </div>
-  </div>
-
-  <div class="project-nav">
-    <a href="prompted.html"><span class="label">Previous project</span>← PromptED</a>
-    <a href="pod.html" class="next"><span class="label">Next project</span>Pod →</a>
-  </div>
+<section>
+  <h2>Research | A Need for Pooled Information</h2>
+  <p><strong>3.4 billion</strong> people lack access to clean, safe and accessible sanitation services. Local leaders and officials do not have enough information to build sanitation systems.</p>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Annie Tang</span>
-    <a href="mailto:anniectang99@gmail.com">anniectang99@gmail.com</a>
+<section>
+  <h2>Building a Global Picture</h2>
+  <p>Interviews with various stakeholders in the value chain were conducted across Asia, North America and Africa. User journeys were then mapped and feedback incorporated into our vision.</p>
+  <ul>
+    <li>Professor of Architecture, Illinois, USA</li>
+    <li>Sanitation Development, Bangalore, India</li>
+    <li>Sanitation Department, Kaduna State Government, Nigeria</li>
+  </ul>
+  <p>Current compendiums, use-cases and standards were analysed to better understand requirements for the project and what "makes a successful project."</p>
+  <figure>
+    <img src="../images/v3-wto-exploration.png" alt="Research into existing toilet-building systems">
+  </figure>
+</section>
+
+<section>
+  <h2>Lo-fi to Hi-fi Prototypes</h2>
+  <p>The flow was designed to ensure user-centred design decisions would be baked into the building process. The report and questions were catered to the user's role — for example, an architect may get design guidelines, and a project officer, legislation.</p>
+  <p>Prototypes were constructed and used to gain feedback from users and other stakeholders in the process. This was useful in keeping the project aligned to its goals.</p>
+  <figure>
+    <img src="../images/v3-wto-wireframe.png" alt="People's Toilet Builder wireframes">
+  </figure>
+  <figure>
+    <img src="../images/v3-wto-desktop.png" alt="People's Toilet Builder desktop design">
+  </figure>
+</section>
+
+<section>
+  <h2>Outcome</h2>
+  <p>The People's Public Toilet Builder had been taken forward to the implementation stage with the aid of the Gates Foundation as well as SuSanA and GIZ collaborators, however has since been stopped. This project would have been the world's first comprehensive toilet compendium and has great value to the hygiene and safety of millions across the world.</p>
+  <figure class="widescreen">
+    <img src="../images/v6-prompted-heroshot-image.png" alt="A laptop displaying the People's Toilet Builder public toilet project page">
+  </figure>
+</section>
+
+<div class="side-nav side-nav-right">
+  <a href="pod.html">Next project (Pod) →</a>
+</div>
+
+<footer>
+  <div class="footer-contact">
+    <p><a href="mailto:annietang@posteo.de">annietang@posteo.de</a></p>
+    <p><a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a></p>
   </div>
+  <p class="copyright">© 2026 Annie Tang</p>
 </footer>
 
-<script src="../js/main.js"></script>
+<script>
+  var navContact = document.querySelector('.nav-contact');
+  if (navContact) {
+    navContact.querySelector('.contact-trigger').addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navContact.classList.toggle('open');
+    });
+    document.addEventListener('click', function (e) {
+      if (!navContact.contains(e.target)) navContact.classList.remove('open');
+    });
+  }
+
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    document.body.classList.toggle('scrolled', y > 40);
+    document.body.classList.toggle('nav-solid', y > 10);
+    if (y < 10) {
+      document.body.classList.remove('nav-hidden');
+    } else if (y > lastScrollY) {
+      document.body.classList.add('nav-hidden');
+    } else if (y < lastScrollY) {
+      document.body.classList.remove('nav-hidden');
+    }
+    lastScrollY = y;
+  });
+</script>
+
 </body>
 </html>

@@ -45,7 +45,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+img { display: block; }
 
 a {
   color: inherit;
@@ -269,11 +269,7 @@ section { padding: var(--space-lg) 0; }
 }
 
 .about-photo img {
-  border-radius: 12px;
   filter: grayscale(1);
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
 }
 
 .bio {
@@ -351,15 +347,11 @@ section { padding: var(--space-lg) 0; }
 .work-card {
   position: relative;
   display: block;
-  border-radius: 20px;
   overflow: hidden;
   background: var(--paper-alt);
 }
 
 .work-thumb img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
   transition: transform 0.5s ease;
 }
 .work-card:hover .work-thumb img { transform: scale(1.035); }
@@ -385,12 +377,30 @@ section { padding: var(--space-lg) 0; }
 
 .work-link { display: none; }
 
+.work-card.soon { cursor: default; }
+
+.soon-fill {
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper-alt);
+  border: 2px dashed var(--line);
+  box-sizing: border-box;
+}
+
+.soon-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
 @media (max-width: 980px) {
   .work-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 680px) {
   .work-grid { grid-template-columns: 1fr; }
-  .work-thumb img { aspect-ratio: 16/10; }
 }
 
 /* ---------- Hobbies strip ---------- */
@@ -400,13 +410,6 @@ section { padding: var(--space-lg) 0; }
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
   text-align: center;
-}
-
-.hobby-item img {
-  border-radius: 10px;
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
 }
 
 .hobby-item p {
@@ -513,7 +516,6 @@ footer.site-footer a:hover { color: var(--green); }
   overflow: hidden;
   margin-bottom: clamp(2rem, 5vw, 3rem);
 }
-.hero-image img { width: 100%; height: auto; object-fit: cover; }
 
 .meta-row {
   display: grid;
@@ -567,7 +569,6 @@ footer.site-footer a:hover { color: var(--green); }
 .stat .label { font-size: 0.85rem; color: var(--ink-soft); }
 
 .figure { margin: 0 0 clamp(2.5rem, 6vw, 4rem); }
-.figure img { border-radius: 12px; }
 .figure figcaption {
   margin-top: 0.85rem;
   font-size: 0.9rem;
@@ -598,11 +599,7 @@ footer.site-footer a:hover { color: var(--green); }
   overflow: hidden;
 }
 .card img {
-  width: calc(100% + 3rem);
-  margin: -1.5rem -1.5rem 1rem;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  display: block;
+  margin: 0 0 1rem;
 }
 
 .stakeholder-grid {
@@ -611,12 +608,6 @@ footer.site-footer a:hover { color: var(--green); }
   gap: var(--gap);
   margin: 0 0 var(--space-md);
   text-align: center;
-}
-.stakeholder-grid img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 10px;
 }
 .stakeholder-grid figure { margin: 0; }
 .stakeholder-grid figcaption {
@@ -697,12 +688,6 @@ footer.site-footer a:hover { color: var(--green); }
   margin-bottom: var(--space-md);
   text-align: center;
 }
-.photo-grid img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 12px;
-}
 .photo-grid figcaption {
   margin-top: 0.85rem;
   font-size: 0.9rem;
@@ -732,12 +717,6 @@ footer.site-footer a:hover { color: var(--green); }
   flex: 0 0 100%;
   scroll-snap-align: start;
   margin: 0;
-}
-.carousel-slide img {
-  width: 100%;
-  aspect-ratio: 16/10;
-  object-fit: cover;
-  border-radius: 12px;
 }
 
 .carousel-caption {

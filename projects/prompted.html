@@ -4,163 +4,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PromptED — Annie Tang</title>
-<meta name="description" content="PromptED: an interactive simulator helping media professionals use generative AI responsibly, built for the European Institute for Participatory Media.">
-<link rel="stylesheet" href="../css/style.css">
+<meta name="description" content="PromptED: an interactive simulator empowering media professionals against disinformation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/readable.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="../index.html" class="logo" aria-label="Annie Tang, home"><span class="mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 21 L12 4 L20 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.8 14 L16.2 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 4 L18 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="logo-name">Annie Tang</span></a>
-    <ul>
-      <li><a href="../index.html#work">Work</a></li>
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
-    </ul>
-  </div>
+<nav>
+  <a href="../index.html" class="site-title">Annie Tang</a>
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li class="nav-contact">
+      <a href="../index.html#contact" class="contact-trigger">Contact</a>
+      <div class="contact-dropdown">
+        <a href="mailto:annietang@posteo.de">annietang@posteo.de</a>
+        <a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </li>
+  </ul>
 </nav>
 
-<div class="wrap project-hero">
-  <a href="../index.html#work" class="back-link">← Back to work</a>
-  <h1>PromptED</h1>
-  <p class="tagline">Empowering media professionals against disinformation, by building better mental models of how generative AI actually works.</p>
-
-  <div class="hero-image">
-    <img src="../images/prompted-hero.jpg" alt="The PromptED interface open on a laptop, showing the responsible AI in journalism homepage">
-  </div>
-
-  <dl class="meta-row">
-    <div><dt>Company</dt><dd>European Institute for Participatory Media, EU Commission</dd></div>
-    <div><dt>Responsibilities</dt><dd>Concept, system, UI/UX & user research</dd></div>
-    <div><dt>Team</dt><dd>2 computer scientists, a user researcher & a design consultant</dd></div>
-    <div><dt>Length</dt><dd>2024 — 2026</dd></div>
-  </dl>
-
-  <div class="affil-row">
-    <span class="affil-label">In partnership with</span>
-    <span class="affil-badge"><span class="affil-mark">EI</span>EIPCM</span>
-    <span class="affil-badge"><span class="affil-mark">EU</span>European Commission</span>
-    <a href="https://aicode-project.eu" target="_blank" rel="noopener" class="affil-badge"><span class="affil-mark">AI</span>AI-CODE Project ↗</a>
-  </div>
-
-  <p class="summary">PromptED is an interactive simulator that helps media professionals understand the principles of generative AI and their associated risks — encouraging responsible AI use within the journalistic workflow.</p>
+<div class="side-nav side-nav-left">
+  <a href="lafayette-gardens.html">← Back to Lafayette Gardens</a>
 </div>
 
-<section class="wrap">
-  <div class="story-block">
-    <h3>Context</h3>
-    <div class="story-copy">
-      <p>To understand journalists' perceptions of generative AI, I ran 18 semi-structured interviews and combined the findings with a literature review to guide the design direction.</p>
-      <div class="stat-row">
-        <div class="stat"><span class="num">Problem</span><span class="label">LLMs' conversational design induces anthropomorphism, leading to automation and confirmation bias, and a reduced ability to assess output validity.</span></div>
-        <div class="stat"><span class="num">User need</span><span class="label">Journalists are concerned by the lack of accuracy, originality, and bias in LLMs, and are asking for training to critically assess LLM outputs.</span></div>
-        <div class="stat"><span class="num">Approach</span><span class="label">Better mental models of AI, built through interactive simulation and priming strategies, support safer use.</span></div>
-      </div>
-    </div>
-  </div>
+<header>
+  <h1>PromptED</h1>
+  <p class="hero-tagline">Empowering Media Professionals against Disinformation</p>
+</header>
 
-  <div class="story-block">
-    <h3>Concept</h3>
-    <div class="story-copy">
-      <p>PromptED is aimed at building appropriate mental models for journalists through experiential learning. To ensure responsible use for trustworthy content production, it was key to base learnings on existing ethical guidelines rather than invent new ones from scratch.</p>
-      <p>The tool helps journalists distinguish appropriate from inappropriate use, understand prompt construction for better reliability, assess the validity of LLM outputs, and align generative AI use with journalistic ethical standards.</p>
-    </div>
-  </div>
+<figure class="widescreen">
+  <img src="../images/v3-prompted-cover.png" alt="PromptED cover shot">
+</figure>
 
-  <div class="story-block">
-    <h3>System design</h3>
-    <div class="story-copy">
-      <p>Using the workflows established in interviews, I designed a two-part learning system. Journalists first explore a <strong>Guided Simulator</strong> to acquire knowledge — LLM principles, prompt construction, output evaluation — then apply it in a <strong>Prompt Playground</strong> with their own prompts. Users can follow a set path or choose their own learnings, letting people with varying knowledge navigate the tool appropriately.</p>
-      <div class="card-grid">
-        <div class="card"><h4>Guided Simulator</h4><p>Six learning units, from next-word prediction and hallucination to system parameters, RAG, and LLM training.</p></div>
-        <div class="card"><h4>Prompt Playground</h4><p>Prompt adaptation, output evaluation, and output comparison — solidifying knowledge on the user's own prompts.</p></div>
-        <div class="card"><h4>Flexible pathing</h4><p>A set path for newcomers, or free navigation for journalists who already know what they need.</p></div>
-      </div>
-    </div>
-  </div>
+<div class="hero-row">
+  <dl class="hero-meta">
+    <div><dt>Company</dt><dd>European Institute of Participatory Media</dd></div>
+    <div><dt>Role</dt><dd>Lead designer &amp; researcher</dd></div>
+    <div><dt>Main Contributions</dt><dd>Concept, System, UI/UX &amp; User Research</dd></div>
+    <div><dt>Team</dt><dd>Computer Scientist x2, Design Consultant</dd></div>
+  </dl>
 
-  <div class="story-block">
-    <h3>Experience design</h3>
-    <div class="story-copy">
-      <p>A key challenge in the Prompt Playground was showing changes between an original and an optimised output amid heavy text loads. I resolved this with a two-column system — past text displayed next to new — and kept page layouts consistent throughout to support learnability and ease of implementation.</p>
-      <p>Drag the handle below to compare the early low-fidelity wireframe against the final branded design.</p>
+  <p>PromptED is an interactive simulator that helps media professionals understand the principles of generative AI and their associated risks, to encourage responsible AI use within the journalistic workflow.</p>
+</div>
 
-      <div class="figure">
-        <div class="compare" style="--pos:50%">
-          <img class="compare-before" src="../images/prompted-ui-after.jpg" alt="Before: the final branded design of the Prompt Playground">
-          <img class="compare-after" src="../images/prompted-ui.jpg" alt="After: an early low-fidelity wireframe of the Prompt Playground">
-          <div class="compare-divider" aria-hidden="true"></div>
-          <div class="compare-handle" aria-hidden="true">↔</div>
-          <input type="range" class="compare-range" min="0" max="100" value="50" aria-label="Drag to compare the final design and wireframe">
-        </div>
-        <div class="compare-labels"><span>Before — final design</span><span>After — wireframe</span></div>
-      </div>
-    </div>
-  </div>
+<section>
+  <h2>Understanding AI Use within Journalism</h2>
+  <p>To understand media professionals' perceptions towards generative AI, a series of 18 semi-structured interviews were conducted. The results were combined with an extensive literature review and served as the basis for our design direction.</p>
+</section>
 
-  <div class="story-block">
-    <h3>Testing &amp; co-creation</h3>
-    <div class="story-copy">
-      <p>Co-creation sessions, workshops, and user tests guided the design throughout. In total, over 12 co-creation and workshop sessions and 9 individual usability tests were conducted, achieving an SUS score of 78.86 in preliminary testing alone. Users highlighted both helpfulness and a strong match with real-world needs.</p>
+<section>
+  <h2>Using Ethics as a Foundation</h2>
+  <p>PromptED is an interactive simulator aimed at building appropriate mental models for journalists using experiential learning techniques. To ensure responsible use for trustworthy content production, it was key to base learnings on existing ethical guidelines.</p>
+  <h3>Ethical Learning Foundations</h3>
+  <figure>
+    <img src="../images/v10-prompted-ethics-pyramid.png" alt="Pyramid diagram of the three ethical learning foundations: Journalistic Ethics & Fact-checking Standards, Guidelines & Policies of AI Use, and PromptED Learnings">
+  </figure>
+</section>
 
-      <div class="photo-grid">
-        <figure>
-          <img src="../images/prompted-testing.jpg" alt="Co-creation workshop session with participants reviewing the PromptED prototype together">
-          <figcaption>A co-creation workshop session with international stakeholders reviewing an early prototype.</figcaption>
-        </figure>
-        <figure>
-          <img src="../images/prompted-cocreate-1.jpg" alt="Presenting the guided simulator to a room of workshop participants via projector">
-          <figcaption>Presenting the guided simulator concept and gathering live feedback via a QR-code survey.</figcaption>
-        </figure>
-        <figure>
-          <img src="../images/prompted-cocreate-2.jpg" alt="The live PromptED interface with AI-CODE branding shown on a participant's laptop during testing">
-          <figcaption>The deployed PromptED interface, tested live by participants during a session.</figcaption>
-        </figure>
-        <figure>
-          <img src="../images/prompted-cocreate-3.jpg" alt="Annie Tang walking a workshop participant through the guided simulator on their laptop">
-          <figcaption>Walking a participant through the guided simulator one-on-one.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
+<section>
+  <h2>Distilling Learnings &amp; System Design</h2>
+  <p>Using existing journalistic workflows established in the interviews and the ethical foundations, a system of learnings for journalists was established. First, journalists explore the guided simulator, where they learn key principles, and next they apply these learnings with their own prompts in the playground.</p>
+  <h3>Modules Breakdown</h3>
+  <figure>
+    <img src="../images/v10-prompted-modules-breakdown.png" alt="Breakdown of the Guided Simulator and Prompt Playground modules, each with their main learnings and learning units">
+  </figure>
+  <p>Users can navigate a set path or select learnings of their own choosing. This allows users of varying knowledge to navigate PromptED appropriately.</p>
+</section>
 
-  <div class="story-block">
-    <h3>Outcome</h3>
-    <div class="story-copy">
-      <p>While still in progress, PromptED is set to be integrated into media institutions across Europe, helping hundreds of thousands of journalists ensure trustworthy content production.</p>
-      <p class="subhead" style="margin-top:1.5rem;">Early adopters include</p>
-      <ul class="adopters">
-        <li>Deutsche Welle Academy</li>
-        <li>Euractiv (Romania, Poland)</li>
-        <li>University of Malaga, Journalism & Media</li>
-        <li>Ramon Llull University Barcelona</li>
-        <li>University of Dubrovnik</li>
-        <li>Andalusian Association of Journalists</li>
-        <li>ADMO — Adria Digital Media Observatory</li>
-        <li>AGCOM, Italian Communications Authority (tbc)</li>
-        <li>AFP, Agence France-Presse (tbc)</li>
-        <li>International Federation of Journalists</li>
-      </ul>
-
-      <figure class="figure">
-        <img src="../images/prompted-outcome.jpg" alt="PromptED shown on a desktop monitor at a home workspace">
-      </figure>
-    </div>
-  </div>
-
-  <div class="project-nav">
-    <a href="../index.html#work"><span class="label">Back to</span>All work</a>
-    <a href="toilet-builder.html" class="next"><span class="label">Next project</span>People's Toilet Builder →</a>
+<section>
+  <h2>Reducing Visual Strain</h2>
+  <p>In addition to the system design, I was responsible for design of the individual flows and features. A key challenge within the prompt playground was how to show changes between original and optimised output. It was decided to use a two-column system where past text was displayed next to new.</p>
+  <ul>
+    <li>Two texts are displayed in one column: underlined blue text is new/replaced text, and red strikethrough is the old. Users can expand or switch out sentences to compare the two texts.</li>
+    <li>Red box icons show text that was in the previous output that does not have a counterpart.</li>
+    <li>Old output text is separated into another column for direct comparison.</li>
+    <li>Direct lines connect old and new output sentence equivalents.</li>
+  </ul>
+  <div class="compare-cols">
+    <figure>
+      <img src="../images/v9-prompted-design-before.png" alt="Before: a single column of output text with inline underlines and strikethroughs marking changes">
+      <figcaption>Before</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/v3-prompted-design.png" alt="After: two columns showing old and new output side by side, with highlighted terms and connecting lines">
+      <figcaption>After</figcaption>
+    </figure>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Annie Tang</span>
-    <a href="mailto:anniectang99@gmail.com">anniectang99@gmail.com</a>
+<section>
+  <h2>Testing &amp; Co-Creation</h2>
+  <p>Throughout the entire project, co-creation sessions, workshops and user tests were leveraged to guide the design. In total, over 10 co-creation and workshop sessions were conducted, 9 individual usability tests were run, and an SUS score of 78.86 was achieved in preliminary testing alone. Users highlighted helpfulness and a match with real-world needs.</p>
+  <div class="gallery-cols">
+    <figure>
+      <img src="../images/v3-prompted-testing.png" alt="Co-creation and testing session for PromptED">
+    </figure>
+    <figure>
+      <img src="../images/v4-prompted-testing2.png" alt="A workshop participant presenting a QR-code survey to the group">
+    </figure>
+    <figure>
+      <img src="../images/v4-prompted-testing3.png" alt="Two participants reviewing the PromptED prototype together on a laptop">
+    </figure>
   </div>
+</section>
+
+<section>
+  <h2>Outcome</h2>
+  <p>As an EU project, PromptED has the potential to be rolled out and aid journalists across the EU. Early indications have shown improvement in mental models already, and therefore help reduce the amount of misinformation entering our media.</p>
+  <h3>Early Adopters</h3>
+  <ul>
+    <li>Deutsche Welle Academy</li>
+    <li>Euractiv (Romania, Poland)</li>
+    <li>University of Málaga, Degrees in Journalism &amp; Media</li>
+    <li>Ramon Llull University Barcelona</li>
+    <li>University of Dubrovnik</li>
+    <li>Andalusian Association of Journalists</li>
+    <li>ADMO — Adria Digital Media Observatory</li>
+    <li>AGCOM — Italian Authority for Communications (tbc)</li>
+    <li>AFP (Agence France-Presse, tbc)</li>
+    <li>International Federation of Journalists</li>
+  </ul>
+  <figure class="widescreen">
+    <img src="../images/v7-prompted-heroshot-clean.png" alt="The PromptED homepage displayed on a desktop monitor">
+  </figure>
+</section>
+
+<div class="side-nav side-nav-right">
+  <a href="toilet-builder.html">Next project (People's Toilet Builder) →</a>
+</div>
+
+<footer>
+  <div class="footer-contact">
+    <p><a href="mailto:annietang@posteo.de">annietang@posteo.de</a></p>
+    <p><a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a></p>
+  </div>
+  <p class="copyright">© 2026 Annie Tang</p>
 </footer>
 
-<script src="../js/main.js"></script>
+<script>
+  var navContact = document.querySelector('.nav-contact');
+  if (navContact) {
+    navContact.querySelector('.contact-trigger').addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navContact.classList.toggle('open');
+    });
+    document.addEventListener('click', function (e) {
+      if (!navContact.contains(e.target)) navContact.classList.remove('open');
+    });
+  }
+
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    document.body.classList.toggle('scrolled', y > 40);
+    document.body.classList.toggle('nav-solid', y > 10);
+    if (y < 10) {
+      document.body.classList.remove('nav-hidden');
+    } else if (y > lastScrollY) {
+      document.body.classList.add('nav-hidden');
+    } else if (y < lastScrollY) {
+      document.body.classList.remove('nav-hidden');
+    }
+    lastScrollY = y;
+  });
+</script>
+
 </body>
 </html>

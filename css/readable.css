@@ -1,0 +1,534 @@
+html { overflow-x: hidden; }
+
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #1a1a1a;
+}
+
+img { max-width: 100%; height: auto; }
+figure { margin: 0 0 1.5rem; }
+
+/* Heroshots are the same width as the central column itself (no separate
+   breakout) — the column was widened to match them instead, so image and
+   text edges always line up and never collide with fixed nav elements. */
+figure.widescreen {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+figure.widescreen img { width: 100%; display: block; }
+
+p { margin: 0 0 1rem; }
+
+a { color: #1a1a1a; text-decoration: underline; text-underline-offset: 2px; }
+
+ul, ol { margin: 0.5rem 0 1.25rem; padding-left: 1.2rem; }
+li { margin-bottom: 0.4rem; }
+
+h2 { font-size: 1.4rem; margin: 0 0 1rem; }
+
+/* h3 = category label/kicker (Experience, Education, section sub-topics) —
+   deliberately quiet so it never competes with the actual titles beneath it */
+h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin: 2rem 0 0.75rem;
+}
+
+article { margin-bottom: 1.5rem; }
+article:last-child { margin-bottom: 0; }
+
+/* Homepage: three columns (Work | About | Contact) instead of the single reading column */
+body.home {
+  max-width: 1700px;
+}
+
+/* Work list: title leads, image sits tight underneath it, and reads clearly as clickable */
+#work article { margin-bottom: 2rem; }
+#work article a { text-decoration: none; }
+#work article img {
+  display: block;
+  border-radius: 4px;
+  transition: opacity 0.15s ease;
+}
+#work article a:hover img { opacity: 0.8; }
+
+/* Tagline always sits between the title and image. */
+.work-tagline {
+  margin: 0 0 0.6rem;
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+/* Project names are real titles, not category kickers — override the generic h3 */
+#work article h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #1a1a1a;
+}
+
+body.home .columns {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+body.home .col h2 { margin-top: 0; }
+.home-v2 .col h2 { margin-bottom: 2rem; }
+
+/* Contact column stays pinned in view while Work/About scroll past. */
+@media (min-width: 821px) {
+  body.home #contact { position: sticky; top: 3.5rem; }
+}
+
+/* Layout variant 1: column titles sit in a pill with a chevron, stretched
+   to the full column width. Work/About are real accordions again — their
+   chevron lives on <summary> (generic details styling below handles the
+   open/close rotation); Contact isn't collapsible, so its h2 carries its
+   own static chevron directly. */
+.home-v1 .col h2 {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+.home-v1 #contact h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 0.15rem 0.4rem 0.15rem 1.5rem;
+  border-radius: 999px;
+  background: #e5e8eb;
+}
+.home-v1 #contact h2::after {
+  content: "▸";
+  font-size: 0.75em;
+  margin-left: 0.75rem;
+}
+.home-v1 #work summary,
+.home-v1 #about summary {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 0.15rem 0.4rem 0.15rem 1.5rem;
+  border-radius: 999px;
+  background: #e5e8eb;
+}
+
+/* Collapsed, the pill shrinks to fit just its own text — the column's
+   grid track stays exactly as wide as always, so the freed space is just
+   blank white space to the right, not room other columns grow into. */
+.home-v1 #work:not([open]) summary,
+.home-v1 #about:not([open]) summary {
+  width: fit-content;
+}
+
+@media (max-width: 820px) {
+  body.home { max-width: 820px; }
+  body.home .columns { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  /* Stacked order: Selected Work, About Me, Contact (the tagline/"PS" already sits above via the nav) */
+  body.home #work { order: 1; }
+  body.home #about { order: 2; }
+  body.home #contact { order: 3; }
+}
+
+/* Top site nav: title left, Work/About/Contact right — first <nav> on every page */
+nav:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+}
+
+.site-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tagline {
+  margin: 0 0 4rem;
+  max-width: 46ch;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Layout variant 1: the tagline becomes a large statement in its own full
+   row, with the three columns starting underneath. */
+.tagline-hero {
+  max-width: 36ch;
+  margin: 8rem 0 16rem 4rem;
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* Layout variant 2: "Annie Tang" + the tagline replace the nav's home link
+   with the "A" mark, and move down into the Contact column as its heading. */
+.site-title-at { display: inline-flex; }
+.site-title-at .mark {
+  width: 22px;
+  height: 22px;
+  color: #1a1a1a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-title-at .mark svg { width: 100%; height: 100%; display: block; }
+.home-v2 #contact .tagline {
+  margin: 0 0 1.5rem;
+  max-width: none;
+}
+.home-v2 .contact-photo {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Selecting a project expands its real content directly into the page —
+   no iframe — taking over the Work + About columns together (both hidden
+   while it's open). Contact stays exactly where it is; Previous/Next live
+   at the bottom of that column instead of inside the expanded content. */
+.home-v2 #project-viewer { grid-column: 2 / 4; }
+.home-v2 #contact {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 3.5rem - 4rem);
+}
+.home-v2 .project-nav-inline[hidden] { display: none; }
+.home-v2 .project-nav-inline {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+}
+.home-v2 .project-nav-inline a { color: #555; text-decoration: none; }
+.home-v2 .project-nav-inline a:hover { color: #1a1a1a; }
+
+body.project-open.home-v2 #work,
+body.project-open.home-v2 #about { display: none; }
+
+/* Contact is permanently 2/3 its original width in v2 — Work/About share
+   the freed space between them — and the gap between all three column
+   titles is wider too. (Matches body.home .columns' specificity so these
+   actually win instead of being silently overridden by it.) */
+body.home-v2 .columns { grid-template-columns: 0.5333fr 1fr 1fr; gap: 8rem; }
+
+/* Selecting Work or About from the nav removes the other column entirely
+   (rather than just collapsing it) and expands the chosen one to span
+   both columns — the same treatment a project view gets. */
+body.work-focused.home-v2 #work { grid-column: 2 / 4; }
+body.work-focused.home-v2 #about { display: none; }
+body.about-focused.home-v2 #about { grid-column: 2 / 4; }
+body.about-focused.home-v2 #work { display: none; }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+nav a { text-decoration: none; color: #1a1a1a; font-weight: 600; }
+
+/* Contact nav item: click to reveal a small dropdown with email/LinkedIn */
+.nav-contact { position: relative; }
+
+.contact-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.75rem;
+  background: #fdfcfa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 190px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.nav-contact.open .contact-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.contact-dropdown a {
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+}
+.contact-dropdown a:hover { background: #f4f2ee; }
+
+/* v2: the contact dropdown reads as frosted glass instead of flat white. */
+.home-v2 .contact-dropdown {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Collapsible Selected Work / About Me columns — chevron sits at the far right */
+details summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary h2 { margin: 0; }
+details summary::after {
+  content: "▸";
+  font-size: 0.75em;
+  margin-left: 0.75rem;
+  transition: transform 0.15s ease;
+}
+details[open] summary::after { transform: rotate(90deg); }
+
+/* Experience/job entries: role + company lead, dates are secondary.
+   Entries with bullet points are accordions — the header (role/dates/org)
+   always shows, clicking it expands or hides just the bullets. */
+details.job { margin-bottom: 1.5rem; }
+details.job summary { align-items: flex-start; margin-bottom: 0; }
+details.job[open] summary { margin-bottom: 0.6rem; }
+details.job ul { margin-top: 0; }
+.job-summary { flex: 1; }
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.job-header .role { margin: 0; font-weight: 700; font-size: 1.05rem; }
+.job-header .dates {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #888;
+  white-space: nowrap;
+}
+.job .org { margin: 0.15rem 0 0.6rem; color: #555; }
+details.job .org { margin-bottom: 0; }
+
+h1, h2, h3 { line-height: 1.25; }
+
+dl { margin: 1rem 0; }
+dt { font-weight: 600; margin-top: 0.75rem; }
+dd { margin: 0; color: #444; }
+
+/* Project pages: tagline sits under the title, stats form a row of columns under the image */
+.hero-tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Stats and the intro/product-definition paragraph share one row — the
+   paragraph sits on the left, stats on the right — instead of stacking. */
+.hero-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.hero-row .hero-meta { flex: 1 1 55%; margin: 0; }
+.hero-row .hero-meta + p { order: -1; flex: 1 1 45%; margin: 0; }
+
+@media (max-width: 700px) {
+  .hero-row { flex-direction: column; gap: 0.5rem; }
+}
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+.hero-meta dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  font-weight: 700;
+  margin: 0;
+}
+.hero-meta dd { margin: 0.25rem 0 0; font-size: 0.9rem; }
+
+@media (max-width: 700px) {
+  .hero-meta { grid-template-columns: 1fr 1fr; }
+}
+
+/* Before/after comparison: always side by side, always the same height.
+   Columns don't need to match in width — each figure's flex-grow is set to
+   its own image's aspect ratio, which is the trick that makes unequal-width
+   columns come out at an identical height while still exactly filling the
+   row (no wrapping, no overflow) at any viewport size. */
+.compare-cols {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 0 1.5rem;
+}
+.compare-cols figure {
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 0;
+  margin: 0;
+}
+.compare-cols figure:first-child { flex-grow: 1.695; } /* before: 1424×840 */
+.compare-cols figure:last-child { flex-grow: 2.076; } /* after: 1017×490 */
+.compare-cols img { width: 100%; height: auto; display: block; }
+.compare-cols figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #888;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .compare-cols { flex-direction: column; }
+  .compare-cols figure:first-child,
+  .compare-cols figure:last-child { flex-grow: 0; }
+}
+
+/* Photo gallery rows: three images side by side instead of stacked. */
+.gallery-cols {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 0 1.5rem;
+}
+.gallery-cols figure { flex: 1 1 33.33%; margin: 0; }
+.gallery-cols img { width: 100%; }
+@media (max-width: 700px) {
+  .gallery-cols { flex-direction: column; }
+}
+
+/* The intro/summary paragraph right after the stats row reads as an editorial
+   lede — distinct from the body copy inside sections further down the page. */
+.hero-meta + p {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #ccc;
+  font-style: italic;
+  color: #444;
+}
+
+footer {
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #ddd;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-contact p { margin: 0 0 0.4rem; }
+.footer-contact p:last-child { margin-bottom: 0; }
+
+.copyright { margin: 0; white-space: nowrap; }
+
+/* Project pages: "Back to work" (left) / "Next project" (right).
+   Only appears once the page has been scrolled, and stays subtle (not bold).
+   Small screens: one fixed row at the very bottom, split left/right.
+   From 1000px, where there's real side margin: fixed to the sides instead, vertically centered (same line). */
+body { padding-bottom: 5rem; }
+
+.side-nav {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  padding: 1rem 1.5rem;
+  background: #fdfcfa;
+  border-top: 1px solid #ddd;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+body.scrolled .side-nav { opacity: 1; pointer-events: auto; }
+.side-nav a { font-weight: 400; text-decoration: none; }
+.side-nav-left { left: 0; }
+.side-nav-right { right: 0; text-align: right; }
+
+@media (min-width: 1000px) {
+  .side-nav {
+    top: 0;
+    bottom: 0;
+    width: 180px;
+    padding: 0 2rem;
+    background: none;
+    border-top: none;
+    display: flex;
+    align-items: center;
+  }
+  .side-nav-left { justify-content: flex-start; }
+  .side-nav-right { justify-content: flex-end; }
+}
+
+/* Top nav bar: hidden while scrolling down, reappears on scroll up. Same on every page. */
+body { padding-top: 4rem; }
+body.home { padding-top: 3.5rem; }
+
+nav:first-of-type {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem 2rem;
+  z-index: 50;
+  transition: transform 0.35s ease, background 0.3s ease;
+}
+
+/* No background at all at the very top of the page — only appears once scrolled */
+body.nav-solid nav:first-of-type {
+  background: rgba(253, 252, 250, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: linear-gradient(to bottom, black 45%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 45%, transparent 100%);
+}
+
+body.nav-hidden nav:first-of-type {
+  transform: translateY(-100%);
+}
+

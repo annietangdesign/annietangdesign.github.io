@@ -5,126 +5,152 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pod — Annie Tang</title>
 <meta name="description" content="Pod: a wearable medical device using electrode 'tattoos' to help people with Chronic Fatigue Syndrome track their symptoms.">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/readable.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="../index.html" class="logo" aria-label="Annie Tang, home"><span class="mark"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 21 L12 4 L20 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.8 14 L16.2 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M6 4 L18 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="logo-name">Annie Tang</span></a>
-    <ul>
-      <li><a href="../index.html#work">Work</a></li>
-      <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
-    </ul>
-  </div>
+<nav>
+  <a href="../index.html" class="site-title">Annie Tang</a>
+  <ul>
+    <li><a href="../index.html#work">Work</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li class="nav-contact">
+      <a href="../index.html#contact" class="contact-trigger">Contact</a>
+      <div class="contact-dropdown">
+        <a href="mailto:annietang@posteo.de">annietang@posteo.de</a>
+        <a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </li>
+  </ul>
 </nav>
 
-<div class="wrap project-hero">
-  <a href="../index.html#work" class="back-link">← Back to work</a>
-  <h1>Pod</h1>
-  <p class="tagline">Monitoring the symptoms of Chronic Fatigue Syndrome with a wearable electrode "tattoo" — medical-grade readings, without the discomfort.</p>
-
-  <div class="hero-image">
-    <img src="../images/pod-hero.jpg" alt="The Pod device being applied to a person's chest with an adhesive electrode">
-  </div>
-
-  <dl class="meta-row">
-    <div><dt>Affiliation</dt><dd>Royal College of Art, Imperial College London, Pratt Institute</dd></div>
-    <div><dt>Skills</dt><dd>Physical computing, product-service system design, user research</dd></div>
-    <div><dt>Length</dt><dd>7 months</dd></div>
-    <div><dt>Role</dt><dd>Concept through working prototype</dd></div>
-  </dl>
-
-  <div class="affil-row">
-    <span class="affil-label">In partnership with</span>
-    <span class="affil-badge"><span class="affil-mark">RCA</span>Royal College of Art</span>
-    <span class="affil-badge"><span class="affil-mark">ICL</span>Imperial College London</span>
-    <span class="affil-badge"><span class="affil-mark">P</span>Pratt Institute</span>
-  </div>
-
-  <p class="summary">Pod is a medical device using EKG technology to help people with Chronic Fatigue Syndrome track their condition. Using novel electrode "tattoos," it generates continuous, medical-grade readings with minimal discomfort — helping users better manage their lives.</p>
+<div class="side-nav side-nav-left">
+  <a href="toilet-builder.html">← Back to People's Toilet Builder</a>
 </div>
 
-<section class="wrap" style="padding-top:0;">
-  <div class="story-block">
-    <h3>Context</h3>
-    <div class="story-copy">
-      <p>People with Chronic Fatigue Syndrome (CFS) are underserved: there are 24 million cases worldwide, zero medically approved monitoring techniques, and 89% of patients are unsatisfied with current methods of symptom management.</p>
-      <p>New research has linked heart rate and heart rate variability to Chronic Fatigue — meaning these biomarkers can, for the first time, be used to track it. But medical-grade ECGs aren't easily wearable, given the leads required. That raised the question: could tattoo-like leads, enabled by new material advances, provide comfortable, long-lasting, medical-grade recording?</p>
+<header>
+  <h1>Pod</h1>
+  <p class="hero-tagline">Monitoring Symptoms of Chronic Fatigue Syndrome</p>
+</header>
 
-      <p>Early ideation explored the device's form directly on paper — electrode points, battery placement, and how it might feel to wear — before moving into 3D concept exploration.</p>
+<figure class="widescreen">
+  <img src="../images/v3-pod-cover.png" alt="Pod device applied to a bare chest">
+</figure>
 
-      <div class="figure-pair">
-        <figure class="figure">
-          <img src="../images/pod-sketches.jpg" alt="Hand-drawn ideation sketches exploring the pod's shape, electrode points, and battery placement">
-          <figcaption>Early ideation sketches — working through electrode placement, form, and battery fit.</figcaption>
-        </figure>
-        <figure class="figure">
-          <img src="../images/pod-concept-render.jpg" alt="A 3D rendering exploring the pod's rounded, organic form among alternative shapes">
-          <figcaption>3D exploration of the pod's rounded, organic form.</figcaption>
-        </figure>
-      </div>
+<div class="hero-row">
+  <dl class="hero-meta">
+    <div><dt>Company</dt><dd>Royal College of Art, Imperial College London, Pratt Institute</dd></div>
+    <div><dt>Responsibilities</dt><dd>Physical Computing, Product Service System Design, Research</dd></div>
+    <div><dt>Team</dt><dd>Solo Project</dd></div>
+  </dl>
 
-      <figure class="figure">
-        <img src="../images/pod-prototype.jpg" alt="A works-like prototype of the Pod device next to its adhesive electrode mounts">
-        <figcaption>Works-like and looks-like prototypes were developed separately, using medically safe materials like silicone and skin tape. The physical prototype was worn for days at a time — and even held up in the shower.</figcaption>
-      </figure>
-    </div>
-  </div>
+  <p>Pod is a medical device using ECG technology to help track chronic fatigue syndrome. By using novel electrode "tattoos," Pod generates continuous medical-grade readings with minimal discomfort to the user.</p>
+</div>
 
-  <div class="story-block">
-    <h3>Electrode lead design</h3>
-    <div class="story-copy">
-      <p>Studying standard ECG placement showed that electrodes are positioned relative to a single point on the chest — reflected in Pod's design through a central notch, which eliminates the need for eleven other alignments.</p>
-
-      <figure class="figure">
-        <img src="../images/pod-electrode.jpg" alt="Standard ECG electrode stickers placed on a person's chest for a conduction test">
-        <figcaption>Proof of concept: a 3-point ECG built with Arduino compared a standard electrode, an electrode using conductive ink, and a no-electrode control — showing early signs that conductive ink could work as a flexible, fixed-shape lead material.</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="story-block">
-    <h3>How it works</h3>
-    <div class="story-copy">
-      <p>Users take their own measurements to get fitted electrode "tattoos," then align and adhere the electrodes to their body, slot the adhesive over the pod, and adhere the pod to the electrode point. A haptic sensor alerts the user when they're over-exerting themselves.</p>
-      <div class="card-grid">
-        <div class="card"><h4>Silicone casing</h4><p>Medically safe housing shaped to sit comfortably against the body.</p></div>
-        <div class="card"><h4>ECG module + battery</h4><p>NMC Li-ion battery and microcontroller driving continuous readings.</p></div>
-        <div class="card"><h4>Haptic motor</h4><p>Alerts the user in real time when they're over-exerting themselves.</p></div>
-      </div>
-
-      <figure class="figure">
-        <img src="../images/pod-exploded.jpg" alt="Exploded diagram of the Pod device showing the silicone casing, battery, microcontroller, ECG module, and haptic motor">
-      </figure>
-    </div>
-  </div>
-
-  <div class="story-block">
-    <h3>Outcome</h3>
-    <div class="story-copy">
-      <p>Pod has the potential to help the 24 million people worldwide managing CFS, and countless millions more living with long COVID. Investigations are underway into further medical use cases for electrode "tattoos," including for people with sleep apnoea.</p>
-
-      <figure class="figure">
-        <img src="../images/pod-outcome.jpg" alt="The Pod device worn on the chest, with a diagram overlay showing electrode placement">
-      </figure>
-    </div>
-  </div>
-
-  <div class="project-nav">
-    <a href="toilet-builder.html"><span class="label">Previous project</span>← People's Toilet Builder</a>
-    <a href="../index.html#contact" class="next"><span class="label">Let's talk</span>Get in touch →</a>
-  </div>
+<section>
+  <h2>Research | HMW Monitor Chronic Fatigue?</h2>
+  <p>Chronic Fatigue Syndrome (CFS) is a disease that can stop people from carrying out basic functions due to extreme exhaustion. Tracking symptoms is key in battling CFS, but current methods are tiring and inaccurate.</p>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Annie Tang</span>
-    <a href="mailto:anniectang99@gmail.com">anniectang99@gmail.com</a>
+<section>
+  <h2>Developing the Form and Function</h2>
+  <p>Prototyping was split into making a works-like and looks-like prototype separately. The looks-like was guided by the works-like, considering size and dimensions, how it fit on the body, and using medically safe materials such as silicone and skin tapes.</p>
+  <p>The physical prototype was worn to stress-test the design and ensure it could be worn for days at a time. Surprisingly, it even held up in the shower!</p>
+  <figure>
+    <img src="../images/v3-pod-sketches.png" alt="Pod ideation sketches">
+  </figure>
+  <figure>
+    <img src="../images/v3-pod-zoomangle.png" alt="Pod prototype, zoomed side angle">
+  </figure>
+</section>
+
+<section>
+  <h2>Electrode Lead Design</h2>
+  <p>The process of ECG placement was studied and showed that electrodes are placed relative to a point on the chest. This is reflected in the design with the central notch.</p>
+  <p><em>Dr. James Gill, 2019 (How to perform an ECG)</em></p>
+
+  <h3>Proof of Concept</h3>
+  <p>To make the electrode "tattoo" possible, it was hypothesised that conductive ink could be used as electrode material. Using this material means the leads could have a fixed shape that was flexible to the body.</p>
+  <p>A 3-point ECG was created using Arduino, and the results from a normal electrode, an electrode with conductive ink, and a control without leads at all were recorded. The test showed first signs of proof of concept.</p>
+  <figure>
+    <img src="../images/v4-pod-electrode-diagram.png" alt="Chart comparing conduction test results for a normal electrode, an electrode with conductive ink, and no electrode">
+    <figcaption>Normalised readings from the 3-point ECG test, comparing electrode, conductive ink, and no-electrode control.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Design Outcome</h2>
+  <figure>
+    <img src="../images/v3-pod-exploded.png" alt="Exploded view of the Pod device showing its components">
+  </figure>
+  <h3>Feature Set</h3>
+  <ol>
+    <li>Silicone Casing</li>
+    <li>NMC Li-ion Battery</li>
+    <li>Microcontroller</li>
+    <li>ECG Module</li>
+    <li>Haptic Motor</li>
+  </ol>
+  <h3>How it works</h3>
+  <ol>
+    <li>Users fill out measurements to get fitted electrode "tattoos"</li>
+    <li>Align and adhere the electrodes to your body</li>
+    <li>Slot the adhesive over the pod</li>
+    <li>Adhere the pod to the electrode point</li>
+    <li>A haptic sensor alerts the user when they are over-exerting themselves</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Outcome</h2>
+  <figure class="widescreen">
+    <img src="../images/v8-pod-heroshot-annotated.png" alt="Close-up of the Pod device worn on the collarbone, with the electrode diagram and the Pod's engraved logo visible">
+  </figure>
+</section>
+
+<div class="side-nav side-nav-right">
+  <a href="lafayette-gardens.html">Next project (Lafayette Gardens) →</a>
+</div>
+
+<footer>
+  <div class="footer-contact">
+    <p><a href="mailto:annietang@posteo.de">annietang@posteo.de</a></p>
+    <p><a href="https://www.linkedin.com/in/annietang99" target="_blank" rel="noopener">LinkedIn</a></p>
   </div>
+  <p class="copyright">© 2026 Annie Tang</p>
 </footer>
 
-<script src="../js/main.js"></script>
+<script>
+  var navContact = document.querySelector('.nav-contact');
+  if (navContact) {
+    navContact.querySelector('.contact-trigger').addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navContact.classList.toggle('open');
+    });
+    document.addEventListener('click', function (e) {
+      if (!navContact.contains(e.target)) navContact.classList.remove('open');
+    });
+  }
+
+  var lastScrollY = window.scrollY;
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    document.body.classList.toggle('scrolled', y > 40);
+    document.body.classList.toggle('nav-solid', y > 10);
+    if (y < 10) {
+      document.body.classList.remove('nav-hidden');
+    } else if (y > lastScrollY) {
+      document.body.classList.add('nav-hidden');
+    } else if (y < lastScrollY) {
+      document.body.classList.remove('nav-hidden');
+    }
+    lastScrollY = y;
+  });
+</script>
+
 </body>
 </html>
